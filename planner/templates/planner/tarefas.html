@@ -1,0 +1,65 @@
+{% extends 'planner/base.html' %}
+{% block title %}Disciplinas - ProfessorHub{% endblock %}
+{% block content %}
+<div class="py-4">
+    <h2 class="mb-4">Tarefas</h2>
+    <button class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#addDisciplineModal">
+        <i class="fas fa-plus"></i> Adicionar tarefa
+    </button>
+    <div class="row" id="tarefasList">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Data de Entrega</th>
+                    <th>Prioridade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tarefasList">
+                <tr>
+                    <td>Tarefa 1</td>
+                    <td>26/03/2025</td>
+                    <td>Urgente</td>
+                    <td>
+                        <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Modal para Adicionar Disciplina -->
+    <div class="modal fade" id="addTarefaModal" tabindex="-1" aria-labelledby="addTarefaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTarefaModalLabel">Adicionar tarefa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/tarefas/" method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label">Título</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Data de Entrega</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Prioridade</label>
+                            <select class="form-control" required>
+                                <option>urgente</option>
+                                <option>parcial</option>
+                                <option>não urgente</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
