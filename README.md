@@ -34,3 +34,23 @@ cria um novo app dentro do projeto.
 ## registrar app no projeto  
 #### editar `settings.py`, adicionar `'nome_do_app'` em `INSTALLED_APPS`  
 necessário para o django reconhecer o app.
+
+
+# 'extends' html
+## exemplo:
+`{% extends "base.html" %}
+
+{% block title %}Página 1{% endblock %}
+
+{% block content %}
+<h2>conteúdo da página 1</h2>
+{% endblock %}`
+
+## exemplo complementar
+`{% extends "base.html" %}
+
+{% block title %}Página 2{% endblock %}
+
+{% block content %}
+<h2>conteúdo da página 2</h2>
+{% endblock %}`
