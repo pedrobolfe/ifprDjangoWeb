@@ -37,7 +37,7 @@ necessário para o django reconhecer o app.
 
 
 # 'extends' html
-
+colocar um main na base
 ## base.html
     <main>
         {% block content %}{% endblock %}
