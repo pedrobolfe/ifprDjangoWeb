@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Minha Aplicação Django{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #cce0ff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #004080;
+            font-weight: bold;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sobre o Projeto</h1>
+    </header>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/ajuda/">Ajuda</a>
+    </nav>
+    <main>
+        <!-- Conteúdo da página será inserido aqui -->
+        <div class="d-flex justify-content-center">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ea veritatis commodi nam ad, minima nisi quo quae? Ullam laborum cupiditate vitae quisquam repellat ad sint perspiciatis, commodi nulla accusantium quae, atque dignissimos? Est, quasi. Officiis, corrupti sunt voluptatem nobis asperiores fugit inventore sint quisquam ad? Ad non voluptates fugit repellendus magnam quae placeat natus accusantium, illum optio adipisci aspernatur quas labore quod tenetur. Nam aliquam repellat fugiat eius doloremque velit quisquam, eveniet at doloribus. Distinctio, consequatur repellendus. Ipsa temporibus repellendus beatae dolorem dolorum ducimus magnam blanditiis omnis commodi quod!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 - Projeto de Aula com Django</p>
+    </footer>
+</body>

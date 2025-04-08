@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Minha Aplicação Django{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #cce0ff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #004080;
+            font-weight: bold;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minha Aplicação Django</h1>
+    </header>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/ajuda/">Ajuda</a>
+    </nav>
+    <main>
+        <!-- Conteúdo da página será inserido aqui -->
+        <form action="/mensagem-enviada/" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input type="text" class="form-control" required name="nome">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Mensagem</label>
+                <input type="text" class="form-control" required name="mensagem">
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 - Projeto de Aula com Django</p>
+    </footer>
+</body>
