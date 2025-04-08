@@ -43,7 +43,7 @@ necessário para o django reconhecer o app.
 {% block title %}Página 1{% endblock %}
 
 {% block content %}
-<h2>conteúdo da página 1</h2>
+'<h2>'conteúdo da página 1'</h2>'
 {% endblock %}`
 
 ## exemplo complementar
@@ -52,5 +52,5 @@ necessário para o django reconhecer o app.
 {% block title %}Página 2{% endblock %}
 
 {% block content %}
-<h2>conteúdo da página 2</h2>
+'<h2>'conteúdo da página 2'</h2>'
 {% endblock %}`
