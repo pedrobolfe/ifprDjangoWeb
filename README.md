@@ -1,5 +1,5 @@
 ## criar ambiente virtual  
-#### `python -m venv venv`  
+#### `python -m venv venv`  ou  `python3 -m venv venv`
 cria um ambiente virtual na pasta `venv`.
 
 ## ativar ambiente virtual  
