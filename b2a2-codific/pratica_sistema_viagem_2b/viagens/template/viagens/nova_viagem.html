@@ -1,0 +1,15 @@
+
+    <h2>Cadastrar Nova Viagem</h2>
+    <form action="/viagens/nova/" method="post">
+        {% csrf_token %}
+        <label>Destino:</label>
+        <input type="text" name="destino" required>
+
+        <label>Data de ida:</label>
+        <input type="date" name="data_ida" required>
+
+        <label>Data de volta:</label>
+        <input type="date" name="data_volta" required>
+
+        <button type="submit">Salvar Viagem</button>
+    </form>
